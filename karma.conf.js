@@ -14,12 +14,15 @@ module.exports = function(config) {
 
     jspm: {
       // Edit this to your needs
-      loadFiles: ['src/**/*.js', 'test/**/*.js']
+      loadFiles: ['src/**/*.js', 'test/**/*spec.js', 'test/amd/*.js']
     },
 
 
     // list of files / patterns to load in the browser
-    files: [],
+    files: [
+      'test/polyfill.js',
+      'jspm_packages/system.js'
+    ],
 
 
     // list of files to exclude
@@ -31,7 +34,7 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       'src/**/*.js': ['6to5'],
-      'test/**/*.js': ['6to5']
+      'test/**/*spec.js': ['6to5']
     },
     '6to5Preprocessor': {
       options: {
