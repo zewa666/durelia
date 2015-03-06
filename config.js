@@ -3,7 +3,8 @@ System.config({
     "*": "*.js",
     "durelia/*": "lib/*.js",
     "github:*": "jspm_packages/github/*.js",
-    "npm:*": "jspm_packages/npm/*.js"
+    "npm:*": "jspm_packages/npm/*.js",
+    "knockout": "test/knockout.js"
   }
 });
 

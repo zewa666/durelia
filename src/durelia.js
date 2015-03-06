@@ -15,7 +15,11 @@ export class Wrapper {
       else
         Object.assign(this, result);
 
-      return this.canActivate();
+      if(result.canActivate !== undefined) {
+        return this.canActivate();
+      }
+
+      return true;
     }).catch( (error) => {
       console.log(error);
     });
